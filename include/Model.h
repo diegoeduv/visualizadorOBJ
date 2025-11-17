@@ -29,6 +29,8 @@ struct Model {
 
     void uploadEBO(const std::vector<float>& vertices, const std::vector<unsigned int>& indices, GLenum drawMode);
 
+    void uploadColoredAlpha(const std::vector<float>& vertices, GLenum drawMode);
+
     /**
      * @brief Dibuja la malla usando el modo configurado.
      */

@@ -1,12 +1,15 @@
 #version 330 core
-layout (location = 0) in vec3 aPos;   // posición
-layout (location = 1) in vec3 aColor; // color por vértice
 
-uniform mat4 uMVP;
+layout(location = 0) in vec3 aPos;
+layout(location = 1) in vec3 aColor;
+
+uniform mat4 uView;
+uniform mat4 uProjection;
 
 out vec3 vColor;
 
-void main() {
+void main()
+{
+    gl_Position = uProjection * uView * vec4(aPos, 1.0);
     vColor = aColor;
-    gl_Position = uMVP * vec4(aPos, 1.0);
 }

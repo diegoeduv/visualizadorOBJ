@@ -42,6 +42,31 @@ void Model::uploadColored(const std::vector<float>& vertices, GLenum drawMode) {
     glBindVertexArray(0);
 }
 
+void Model::uploadColoredAlpha(const std::vector<float>& vertices, GLenum drawMode) {
+    mode = drawMode;
+
+    // 7 floats por vértice: x y z r g b a
+    count = static_cast<GLsizei>(vertices.size() / 7);
+
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+    glBufferData(GL_ARRAY_BUFFER,vertices.size() * sizeof(float),vertices.data(),GL_STATIC_DRAW);
+
+    // --- POSICIÓN: 3 floats ---
+    glVertexAttribPointer(0,3, GL_FLOAT, GL_FALSE, 7 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    // --- COLOR + ALPHA: 4 floats ---
+    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 7 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    glBindVertexArray(0);
+}
+
 
 void Model::uploadEBO(const std::vector<float>& vertices, const std::vector<unsigned int>& indices, GLenum drawMode)
 {
@@ -74,6 +99,8 @@ void Model::uploadEBO(const std::vector<float>& vertices, const std::vector<unsi
 
     glBindVertexArray(0);
 }
+
+
 
 
 void Model::draw() const {

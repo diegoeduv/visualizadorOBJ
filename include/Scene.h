@@ -28,8 +28,8 @@ class Scene {
 
     // --- Componentes principales ---
     Window window;
-    Shader shader, shaderAxes;
-    Model axes;
+    Shader shader, shaderAxes, shaderMovingAxes;
+    Model axes, movingAxes;
 
     // --- Matrices ---
     glm::mat4 m_view;
@@ -47,6 +47,18 @@ class Scene {
 
     // --- Estado ---
     bool showingGrids = false; // false = modelos OBJ, true = grids
+
+    float modelScale = 1.0f;
+    float zoomStep = 0.05f;
+
+    float axesLength = 1.0f;
+    float movingAxesLength = 1.0f;
+
+    float alpha = 0.55f;
+
+
+
+
 
 public:
     Scene();

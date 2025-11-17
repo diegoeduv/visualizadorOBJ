@@ -1,12 +1,13 @@
 #include "Scene.h"
-#include <iostream>
 
 Scene::Scene()
     : window(SCR_WIDTH, SCR_HEIGHT, "Visualizador OpenGL"),
       shader("../shaders/height.vert", "../shaders/height.frag"),
-      shaderAxes("../shaders/axis.vert", "../shaders/axis.frag")
+      shaderAxes("../shaders/axis.vert", "../shaders/axis.frag"),
+      shaderMovingAxes("../shaders/moving_axis.vert", "../shaders/moving_axis.frag")
 {
-    axes.uploadColored(Geometry::makeAxes(), GL_LINES);
+    axes.uploadColored(Geometry::makeAxes(axesLength), GL_LINES);
+    movingAxes.uploadColoredAlpha(Geometry::makeAxesAlpha(axesLength, alpha), GL_LINES);
 
     loadModels();
     loadGrids();
@@ -15,6 +16,9 @@ Scene::Scene()
 
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 }
 
 Scene::~Scene() {
@@ -134,6 +138,16 @@ void Scene::updateCameraToModel(const ImportedModel& model) {
 
     float aspect = window.getAspectRatio();
     m_projection = glm::perspective(glm::radians(45.0f), aspect, 0.1f, maxDim * 10.0f);
+
+    axesLength = distance * 1.5f;
+    movingAxesLength = maxDim;
+
+    // recrear ejes con este tamaño
+    axes.destroy();
+    axes.uploadColored(Geometry::makeAxes(axesLength), GL_LINES);
+    movingAxes.destroy();
+    movingAxes.uploadColoredAlpha(Geometry::makeAxesAlpha(movingAxesLength, alpha), GL_LINES);
+
 }
 
 
@@ -163,6 +177,16 @@ void Scene::updateCameraToGrid(const Grid& grid) {
 
     float aspect = window.getAspectRatio();
     m_projection = glm::perspective(glm::radians(45.0f), aspect, 0.1f, maxDim * 10.0f);
+
+    axesLength = distance * 1.5f;
+    movingAxesLength = maxDim * 1.5f;
+
+    axes.destroy();
+    axes.uploadColored(Geometry::makeAxes(axesLength), GL_LINES);
+    movingAxes.destroy();
+    movingAxes.uploadColoredAlpha(Geometry::makeAxesAlpha(movingAxesLength, alpha), GL_LINES);
+    
+
 }
 
 
@@ -172,7 +196,7 @@ void Scene::updateCameraToGrid(const Grid& grid) {
 void Scene::renderModels() {
     auto& model = m_models[m_currentModel];
     shader.use();
-    shader.setMat4("uModel", m_model);
+    shader.setMat4("uModel", glm::scale(m_model, glm::vec3(modelScale)));
     shader.setMat4("uView", m_view);
     shader.setMat4("uProjection", m_projection);
 
@@ -194,7 +218,7 @@ void Scene::renderModels() {
 void Scene::renderGrids() {
     auto& grid = m_grids[m_currentGrid];
     shader.use();
-    shader.setMat4("uModel", m_model);
+    shader.setMat4("uModel", glm::scale(m_model, glm::vec3(modelScale)));
     shader.setMat4("uView", m_view);
     shader.setMat4("uProjection", m_projection);
 
@@ -215,15 +239,6 @@ void Scene::renderGrids() {
 // Bucle principal
 // ----------------------------------------------------------
 void Scene::run() {
-        // -----------------------------
-    // Control de cámara orbital
-    // -----------------------------
-    // Variables de cámara orbital (antes del while)
-    float radius = 120.0f;   // distancia inicial
-    float angleY = glm::radians(45.0f); // vista diagonal
-    float angleX = glm::radians(20.0f); // vista desde arriba
-
-
     while (!window.shouldClose()) {
         if (glfwGetKey(window.handle, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(window.handle, 1);
@@ -296,69 +311,28 @@ void Scene::run() {
                 m_models[m_currentModel].setMode(GL_TRIANGLES);
         }
 
-        // -----------------------------
-        // Control de cámara orbital
-        // -----------------------------
-
-        // --- Rotación con flechas ---
-        if (glfwGetKey(window.handle, GLFW_KEY_LEFT) == GLFW_PRESS)
-            angleY -= 0.02f;
-        if (glfwGetKey(window.handle, GLFW_KEY_RIGHT) == GLFW_PRESS)
-            angleY += 0.02f;
-        if (glfwGetKey(window.handle, GLFW_KEY_UP) == GLFW_PRESS)
-            angleX += 0.02f;
-        if (glfwGetKey(window.handle, GLFW_KEY_DOWN) == GLFW_PRESS)
-            angleX -= 0.02f;
-
-        // Limita el ángulo vertical para no voltear la cámara
-        angleX = glm::clamp(angleX, -1.2f, 1.2f);
-
-        // --- Zoom con + y - ---
-        if (glfwGetKey(window.handle, GLFW_KEY_KP_ADD) == GLFW_PRESS || glfwGetKey(window.handle, GLFW_KEY_EQUAL) == GLFW_PRESS)
-            radius -= 2.0f;
-        if (glfwGetKey(window.handle, GLFW_KEY_KP_SUBTRACT) == GLFW_PRESS || glfwGetKey(window.handle, GLFW_KEY_MINUS) == GLFW_PRESS)
-            radius += 2.0f;
-
-        radius = glm::clamp(radius, 10.0f, 500.0f); // evita zoom extremo
-
-        // --- Cálculo de posición orbital ---
-        float camX = radius * cos(angleX) * sin(angleY);
-        float camY = radius * sin(angleX);
-        float camZ = radius * cos(angleX) * cos(angleY);
-
-        // --- Define el punto de enfoque (centro del modelo o grid) ---
-        glm::vec3 target(0.0f, 0.0f, 0.0f);
-        if (showingGrids && !m_grids.empty()) {
-            auto verts = m_grids[m_currentGrid].getVertices();
-            if (!verts.empty()) {
-                glm::vec3 minP(verts[0], verts[1], verts[2]);
-                glm::vec3 maxP = minP;
-                for (size_t i = 0; i < verts.size(); i += 3) {
-                    minP.x = std::min(minP.x, verts[i]);
-                    minP.y = std::min(minP.y, verts[i + 1]);
-                    minP.z = std::min(minP.z, verts[i + 2]);
-                    maxP.x = std::max(maxP.x, verts[i]);
-                    maxP.y = std::max(maxP.y, verts[i + 1]);
-                    maxP.z = std::max(maxP.z, verts[i + 2]);
-                }
-                target = (minP + maxP) * 0.5f;
-            }
+        // Zoom por reescalamiento
+        if (glfwGetKey(window.handle, GLFW_KEY_EQUAL) == GLFW_PRESS) { // '+'
+            modelScale += zoomStep;
         }
 
-        // --- Actualiza la vista ---
-        glm::vec3 cameraPos = glm::vec3(camX, camY, camZ);
-        glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
-        m_view = glm::lookAt(cameraPos, target, up);
-
-
+        if (glfwGetKey(window.handle, GLFW_KEY_MINUS) == GLFW_PRESS) { // '-'
+            modelScale -= zoomStep;
+            if (modelScale < 0.05f) modelScale = 0.05f; // evita invertir el modelo
+        }
 
         // --- Render ---
         Renderer::clear(0.12f, 0.13f, 0.15f, 1.0f);
         shaderAxes.use();
-        shaderAxes.setMat4("uModel", glm::mat4(1.0f));      // los ejes están en el origen
-        shaderAxes.setMat4("uView", m_view);                // usa la misma vista
-        shaderAxes.setMat4("uProjection", m_projection);    // misma proyección
+        shaderAxes.setMat4("uView", m_view);
+        shaderAxes.setMat4("uProjection", m_projection);
         axes.draw();
+
+        shaderMovingAxes.use();
+        shaderMovingAxes.setMat4("uModel", glm::scale(m_model, glm::vec3(modelScale)));
+        shaderMovingAxes.setMat4("uView", m_view);
+        shaderMovingAxes.setMat4("uProjection", m_projection);;
+        movingAxes.draw();
 
 
         if (showingGrids)
