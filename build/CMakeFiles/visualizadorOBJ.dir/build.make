@@ -53,10 +53,10 @@ RM = /snap/cmake/1487/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/diego/Practicas 2026-1/visualizacion/proyecto"
+CMAKE_SOURCE_DIR = "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/diego/Practicas 2026-1/visualizacion/proyecto/build"
+CMAKE_BINARY_DIR = "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/visualizadorOBJ.dir/depend.make
@@ -73,144 +73,144 @@ CMakeFiles/visualizadorOBJ.dir/codegen:
 .PHONY : CMakeFiles/visualizadorOBJ.dir/codegen
 
 CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Geometry.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Geometry.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Geometry.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Geometry.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Geometry.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Geometry.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Geometry.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Geometry.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Geometry.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Main.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Main.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Main.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Main.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Main.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Main.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Main.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Model.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Model.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Model.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Model.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Model.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Model.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Model.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Model.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Render.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Render.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Render.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Render.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Render.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Render.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Render.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Render.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Scene.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Scene.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Scene.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Scene.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Scene.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Scene.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Scene.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Scene.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Scene.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Shader.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Shader.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Shader.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Shader.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Shader.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Shader.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Shader.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Shader.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Window.cpp
+CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Window.cpp
 CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Window.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Window.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Window.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Window.cpp" > CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/Window.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/Window.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/models/ImportedModel.cpp
+CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/models/ImportedModel.cpp
 CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/models/ImportedModel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/models/ImportedModel.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/models/ImportedModel.cpp" > CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/models/ImportedModel.cpp" > CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/models/ImportedModel.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/models/ImportedModel.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/obj_helpers/ModelImporter.cpp
+CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/obj_helpers/ModelImporter.cpp
 CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/obj_helpers/ModelImporter.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/obj_helpers/ModelImporter.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/obj_helpers/ModelImporter.cpp" > CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/obj_helpers/ModelImporter.cpp" > CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/obj_helpers/ModelImporter.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/obj_helpers/ModelImporter.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.s
 
 CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o: CMakeFiles/visualizadorOBJ.dir/flags.make
-CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/models/Grid.cpp
+CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o: /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/models/Grid.cpp
 CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o: CMakeFiles/visualizadorOBJ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/models/Grid.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o -MF CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o.d -o CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o -c "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/models/Grid.cpp"
 
 CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/models/Grid.cpp" > CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/models/Grid.cpp" > CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.i
 
 CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/proyecto/src/models/Grid.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/src/models/Grid.cpp" -o CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.s
 
 # Object files for target visualizadorOBJ
 visualizadorOBJ_OBJECTS = \
@@ -244,7 +244,7 @@ visualizadorOBJ: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 visualizadorOBJ: /usr/lib/x86_64-linux-gnu/libGLX.so
 visualizadorOBJ: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 visualizadorOBJ: CMakeFiles/visualizadorOBJ.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable visualizadorOBJ"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable visualizadorOBJ"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/visualizadorOBJ.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -256,6 +256,6 @@ CMakeFiles/visualizadorOBJ.dir/clean:
 .PHONY : CMakeFiles/visualizadorOBJ.dir/clean
 
 CMakeFiles/visualizadorOBJ.dir/depend:
-	cd "/home/diego/Practicas 2026-1/visualizacion/proyecto/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/diego/Practicas 2026-1/visualizacion/proyecto" "/home/diego/Practicas 2026-1/visualizacion/proyecto" "/home/diego/Practicas 2026-1/visualizacion/proyecto/build" "/home/diego/Practicas 2026-1/visualizacion/proyecto/build" "/home/diego/Practicas 2026-1/visualizacion/proyecto/build/CMakeFiles/visualizadorOBJ.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ" "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ" "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build" "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build" "/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles/visualizadorOBJ.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/visualizadorOBJ.dir/depend
 

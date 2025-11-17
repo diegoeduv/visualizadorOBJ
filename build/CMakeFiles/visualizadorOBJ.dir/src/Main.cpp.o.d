@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Main.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Main.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Scene.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Scene.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -268,7 +268,7 @@ CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: \
  /usr/include/glm/ext/vector_uint1_sized.hpp /usr/include/c++/11/cstring \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/glm/gtc/type_ptr.inl \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Window.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Window.h \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
@@ -337,7 +337,7 @@ CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Shader.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Shader.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
@@ -362,11 +362,11 @@ CMakeFiles/visualizadorOBJ.dir/src/Main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Model.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Render.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Geometry.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/models/ImportedModel.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Model.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/obj_helpers/ModelImporter.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/models/Grid.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Model.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Render.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Geometry.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/models/ImportedModel.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Model.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/obj_helpers/ModelImporter.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/models/Grid.h \
  /usr/include/c++/11/iostream

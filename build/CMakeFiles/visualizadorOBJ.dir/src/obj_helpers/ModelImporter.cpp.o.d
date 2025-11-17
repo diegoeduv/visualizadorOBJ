@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/obj_helpers/ModelImporter.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/obj_helpers/ModelImporter.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/obj_helpers/ModelImporter.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/obj_helpers/ModelImporter.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/obj_helpers/ModelImporter.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

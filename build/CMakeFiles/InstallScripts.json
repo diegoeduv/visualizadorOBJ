@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/diego/Practicas 2026-1/visualizacion/proyecto/build/cmake_install.cmake"
+		"/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

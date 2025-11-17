@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/models/Grid.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/models/Grid.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/models/Grid.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/models/Grid.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -310,7 +310,7 @@ CMakeFiles/visualizadorOBJ.dir/src/models/Grid.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Model.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Model.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \

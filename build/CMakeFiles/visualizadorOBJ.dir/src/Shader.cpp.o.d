@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/Shader.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Shader.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Shader.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Shader.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Shader.h \
  /usr/include/glm/gtc/type_ptr.hpp /usr/include/glm/gtc/quaternion.hpp \
  /usr/include/glm/gtc/constants.hpp \
  /usr/include/glm/ext/scalar_constants.hpp \

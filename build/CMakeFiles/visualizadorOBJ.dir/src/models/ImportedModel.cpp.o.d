@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/models/ImportedModel.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/models/ImportedModel.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/models/ImportedModel.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/models/ImportedModel.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -93,8 +93,8 @@ CMakeFiles/visualizadorOBJ.dir/src/models/ImportedModel.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Model.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/obj_helpers/ModelImporter.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Model.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/obj_helpers/ModelImporter.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \

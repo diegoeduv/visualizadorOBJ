@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/Model.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Model.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Model.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Model.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Model.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

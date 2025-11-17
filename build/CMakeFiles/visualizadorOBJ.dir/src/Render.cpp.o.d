@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/Render.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Render.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Render.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Render.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Render.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

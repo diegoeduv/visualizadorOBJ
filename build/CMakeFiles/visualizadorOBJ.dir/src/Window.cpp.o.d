@@ -1,7 +1,7 @@
 CMakeFiles/visualizadorOBJ.dir/src/Window.cpp.o: \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/src/Window.cpp \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/src/Window.cpp \
  /usr/include/stdc-predef.h \
- /home/diego/Practicas\ 2026-1/visualizacion/proyecto/include/Window.h \
+ /home/diego/Practicas\ 2026-1/visualizacion/visualizadorOBJ/include/Window.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
