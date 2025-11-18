@@ -12,8 +12,8 @@
 class Window {
 public:
     GLFWwindow* handle = nullptr; ///< Puntero a la ventana GLFW.
-    unsigned width;               ///< Ancho.
-    unsigned height;              ///< Alto.
+    unsigned width; ///< Ancho.
+    unsigned height; ///< Alto.
 
     /**
      * @brief Crea la ventana e inicializa GLFW/GLEW.

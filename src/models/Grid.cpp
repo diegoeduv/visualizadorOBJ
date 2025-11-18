@@ -121,6 +121,7 @@ std::vector<float> Grid::getVertices() const {
     return verts;
 }
 
+// Retorna el número de vértices
 int Grid::getNumVertices() const {
     return m_width * m_depth;
 }
