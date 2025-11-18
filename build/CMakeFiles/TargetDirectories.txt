@@ -1,3 +1,0 @@
-/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles/visualizadorOBJ.dir
-/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles/edit_cache.dir
-/home/diego/Practicas 2026-1/visualizacion/visualizadorOBJ/build/CMakeFiles/rebuild_cache.dir

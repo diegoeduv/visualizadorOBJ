@@ -1,6 +1,7 @@
 #include "models/ImportedModel.h"
 #include <iostream>
 
+// Carga un archivo OBJ y sube sus vértices al GPU
 void ImportedModel::loadFromOBJ(const char* filePath) {
     importer.parseOBJ(filePath);
 
@@ -12,11 +13,14 @@ void ImportedModel::loadFromOBJ(const char* filePath) {
         std::cerr << "Error: no se cargaron vértices desde " << filePath << std::endl;
         return;
     }
+
     std::cout << "Modelo cargado: " << m_vertices.size() / 3 << " vértices\n";
-    // Usa la función base "upload" del Model
-    upload(m_vertices, GL_TRIANGLES);
+
+    // Sube solo posiciones
+    uploadFullModel(m_vertices, m_texCoords, m_normals, GL_TRIANGLES);
 }
 
+// Dibuja el modelo usando drawArrays del Model base
 void ImportedModel::draw() const {
-    Model::draw(); // Usa la implementación base
+    Model::draw();
 }

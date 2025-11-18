@@ -8,6 +8,7 @@ static int resolveIndex(int idx, int size) {
     return (idx > 0) ? idx - 1 : size + idx;
 }
 
+// Parsea un archivo .OBJ simple (v, vt, vn, f)
 void ModelImporter::parseOBJ(const char* filePath) {
     std::ifstream fileStream(filePath, std::ios::in);
     if (!fileStream) {
@@ -80,7 +81,11 @@ void ModelImporter::parseOBJ(const char* filePath) {
 int ModelImporter::getNumVertices() const {
     return static_cast<int>(triangleVerts.size() / 3);
 }
-
+// Devuelve vector plano de posiciones (x,y,z).
 std::vector<float> ModelImporter::getVertices() const { return triangleVerts; }
+
+// Devuelve vector plano de coordenadas de textura (u,v).
 std::vector<float> ModelImporter::getTextureCoords() const { return textureCoords; }
+
+// Devuelve vector plano de normales (x,y,z).
 std::vector<float> ModelImporter::getNormals() const { return normals; }

@@ -8,17 +8,17 @@
  * @class ModelImporter
  * @brief Parser básico para archivos .OBJ.
  *
- * Lee vértices, coordenadas de textura y normales de un archivo .obj
- * y genera vectores listos para ser usados como atributos de vértices en OpenGL.
+ * Lee posiciones, UVs y normales desde un archivo .OBJ y genera
+ * buffers listos para cargar en OpenGL.
  */
 class ModelImporter {
 private:
-    // Datos originales leídos del archivo .obj
-    std::vector<float> vertVals;  ///< posiciones (v)
-    std::vector<float> stVals;    ///< coordenadas de textura (vt)
-    std::vector<float> normVals;  ///< normales (vn)
+    // Datos crudos leídos del archivo .OBJ
+    std::vector<float> vertVals; ///< Posiciones (v)
+    std::vector<float> stVals; ///< Coord. de textura (vt)
+    std::vector<float> normVals; ///< Normales (vn)
 
-    // Datos finales listos para cargar al GPU
+    // Datos expandidos listos para GPU
     std::vector<float> triangleVerts;
     std::vector<float> textureCoords;
     std::vector<float> normals;
@@ -28,21 +28,21 @@ public:
     ModelImporter() = default;
 
     /**
-     * @brief Parsea un archivo OBJ.
-     * @param filePath Ruta al archivo OBJ.
+     * @brief Parsea un archivo .OBJ.
+     * @param filePath Ruta del archivo.
      */
     void parseOBJ(const char* filePath);
 
-    /// @return Número de vértices cargados.
+    /// Devuelve número total de vértices.
     int getNumVertices() const;
 
-    /// @return Vector de vértices (x, y, z).
+    /// Devuelve vector plano de posiciones (x,y,z).
     std::vector<float> getVertices() const;
 
-    /// @return Vector de coordenadas de textura (u, v).
+    /// Devuelve vector de coordenadas UV (u,v).
     std::vector<float> getTextureCoords() const;
 
-    /// @return Vector de normales (x, y, z).
+    /// Devuelve vector de normales (x,y,z).
     std::vector<float> getNormals() const;
 };
 

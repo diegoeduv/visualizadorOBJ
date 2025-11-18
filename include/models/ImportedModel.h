@@ -8,11 +8,12 @@
 
 /**
  * @class ImportedModel
- * @brief Modelo que carga geometría desde un archivo .OBJ usando ModelImporter.
+ * @brief Modelo cargado desde un archivo OBJ.
  *
- * Hereda de Model y permite subir a GPU los vértices obtenidos desde el parser OBJ.
+ * Usa ModelImporter y sube la geometría al GPU mediante la base Model.
  */
 class ImportedModel : public Model {
+
 private:
     ModelImporter importer;
     std::vector<float> m_vertices;
@@ -23,21 +24,20 @@ public:
     ImportedModel() = default;
 
     /**
-     * @brief Carga el modelo desde un archivo .OBJ.
-     * @param filePath Ruta al archivo OBJ.
+     * @brief Carga un modelo OBJ desde filePath.
      */
     void loadFromOBJ(const char* filePath);
 
     /**
-     * @brief Dibuja el modelo (usa draw() heredado de Model).
+     * @brief Renderiza el modelo (draw heredado).
      */
     void draw() const;
 
+    /// Número total de vértices (Esto considera los vertices adicionales que se generaron al leer las caras)
     int getNumVertices() const { return static_cast<int>(m_vertices.size() / 3); }
+
+    /// Devuelve el arreglo plano de vértices (x,y,z)
     std::vector<float> getVertices() const { return m_vertices; }
-
 };
-
-
 
 #endif

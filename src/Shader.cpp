@@ -1,5 +1,6 @@
 #include "Shader.h"
 
+// Lee un archivo completo y devuelve su contenido.
 std::string Shader::readFile(const std::string& path) {
     std::ifstream file(path, std::ios::binary);
     if (!file)
@@ -15,6 +16,7 @@ std::string Shader::readFile(const std::string& path) {
     return buffer;
 }
 
+// Compila un shader (vertex o fragment) a partir de código fuente.
 GLuint Shader::compile(GLenum type, const std::string& src) {
     GLuint id = glCreateShader(type);
     const char* c = src.c_str();
@@ -33,6 +35,7 @@ GLuint Shader::compile(GLenum type, const std::string& src) {
     return id;
 }
 
+// Carga, compila y enlaza vertex + fragment shader.
 Shader::Shader(const std::string& vertPath, const std::string& fragPath) {
     std::string vsrc = readFile(vertPath);
     std::string fsrc = readFile(fragPath);
@@ -58,24 +61,29 @@ Shader::Shader(const std::string& vertPath, const std::string& fragPath) {
     }
 }
 
+// Libera el programa.
 Shader::~Shader() {
     if (program_)
         glDeleteProgram(program_);
 }
 
+// Activa el shader.
 void Shader::use() const {
     glUseProgram(program_);
 }
 
+// Devuelve el ID del programa.
 GLuint Shader::id() const {
     return program_;
 }
 
+// Envía un vec3 al shader.
 void Shader::setVec3(const char* name, float x, float y, float z) const {
     GLint loc = glGetUniformLocation(program_, name);
     glUniform3f(loc, x, y, z);
 }
 
+// Envía una matriz 4x4 al shader.
 void Shader::setMat4(const char* name, const glm::mat4& mat) const {
     GLint loc = glGetUniformLocation(program_, name);
     glUniformMatrix4fv(loc, 1, GL_FALSE, glm::value_ptr(mat));

@@ -8,7 +8,8 @@ uniform mat4 uView;
 uniform mat4 uProjection;
 
 void main()
-{
+{   
+    // Calculamos la posición final del vértice
     gl_Position = uProjection * uView * uModel * vec4(aPos, 1.0);
     vHeight = aPos.y; // enviamos la coordenada Y
 }

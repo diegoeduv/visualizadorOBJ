@@ -1,5 +1,6 @@
 #include "Window.h"
 
+// Inicializa GLFW/GLEW y crea la ventana.
 Window::Window(unsigned w, unsigned h, const char* title)
     : width(w), height(h)
 {
@@ -17,6 +18,8 @@ Window::Window(unsigned w, unsigned h, const char* title)
     }
 
     glfwMakeContextCurrent(handle);
+
+    // Ajusta el viewport al redimensionar.
     glfwSetFramebufferSizeCallback(handle, [](GLFWwindow*, int W, int H) {
         glViewport(0, 0, W, H);
     });
@@ -28,18 +31,22 @@ Window::Window(unsigned w, unsigned h, const char* title)
     }
 }
 
+// Cierra GLFW.
 Window::~Window() {
     glfwTerminate();
 }
 
+// Devuelve true si la ventana debe cerrarse.
 bool Window::shouldClose() const {
     return glfwWindowShouldClose(handle);
 }
 
+// Procesa eventos pendientes.
 void Window::poll() const {
     glfwPollEvents();
 }
 
+// Intercambia buffers.
 void Window::swap() const {
     glfwSwapBuffers(handle);
 }

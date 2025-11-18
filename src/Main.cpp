@@ -1,8 +1,8 @@
 /**
  * @file Main.cpp
- * @brief Programa principal para ejecutar la aplicación de visualización OpenGL.
+ * @brief Programa principal para ejecutar la aplicación de visualizadorOBJ.
  *
- * Inicializa la clase App y captura excepciones.
+ * Inicializa la clase Scene y captura excepciones.
  */
 #include "Scene.h"
 #include <iostream>

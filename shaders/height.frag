@@ -18,7 +18,7 @@ void main()
 
     vec3 color;
 
-    // Interpolación: azul → amarillo → rojo
+    // Interpolación: azul - amarillo - rojo
     if (t < 0.5)
         color = mix(colorLow, colorMid, t * 2.0);   // 0–0.5
     else

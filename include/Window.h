@@ -7,41 +7,35 @@
 
 /**
  * @class Window
- * @brief Encapsula la creación y gestión de una ventana GLFW con contexto OpenGL.
- *
- * Esta clase inicializa GLFW y GLEW, crea una ventana y gestiona el ciclo de vida de la misma.
+ * @brief Encapsula una ventana GLFW con contexto OpenGL.
  */
 class Window {
 public:
-    GLFWwindow* handle = nullptr; ///< Puntero al objeto de ventana GLFW.
-    unsigned width;  ///< Ancho de la ventana.
-    unsigned height; ///< Alto de la ventana.
+    GLFWwindow* handle = nullptr; ///< Puntero a la ventana GLFW.
+    unsigned width;               ///< Ancho.
+    unsigned height;              ///< Alto.
 
     /**
-     * @brief Constructor. Inicializa GLFW, GLEW y crea la ventana.
-     * @param w Ancho de la ventana.
-     * @param h Alto de la ventana.
-     * @param title Título de la ventana.
-     * @throws std::runtime_error si falla la inicialización o creación de la ventana.
+     * @brief Crea la ventana e inicializa GLFW/GLEW.
      */
     Window(unsigned w, unsigned h, const char* title);
 
-    /// Destructor. Libera los recursos terminando GLFW.
+    /// Cierra la ventana y termina GLFW.
     ~Window();
 
-    /// Indica si la ventana debe cerrarse.
+    /// Indica si debe cerrarse.
     bool shouldClose() const;
 
-    /// Procesa los eventos de la ventana.
+    /// Procesa eventos.
     void poll() const;
 
-    /// Intercambia los buffers de la ventana.
+    /// Intercambia buffers.
     void swap() const;
 
+    /// Retorna width/height.
     float getAspectRatio() const {
-    return static_cast<float>(width) / static_cast<float>(height);
-}
-
+        return static_cast<float>(width) / static_cast<float>(height);
+    }
 };
 
 #endif

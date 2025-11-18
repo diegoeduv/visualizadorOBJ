@@ -6,43 +6,45 @@
 
 /**
  * @struct Model
- * @brief Representa una malla simple para renderizado en OpenGL.
- *
- * Permite cargar vértices, dibujar la malla y liberar recursos. Es un struct en vez de una clase ya que
- * facilita la llamada a las funciones al trabajar con múltiples figuras.
+ * @brief Malla básica para render en OpenGL.
  */
 struct Model {
-    GLuint VAO = 0;   ///< Identificador del Vertex Array Object (VAO).
-    GLuint VBO = 0;   ///< Identificador del Vertex Buffer Object (VBO).
-    GLuint EBO = 0;   ///< Identificador del Element Buffer Object (EBO).
-    GLsizei count = 0;///< Número de vértices a dibujar.
-    GLenum mode = GL_TRIANGLES; ///< Modo de dibujo (GL_TRIANGLES, GL_TRIANGLE_STRIP, etc).
 
-    /**
-     * @brief Carga los vértices en la GPU y configura el VAO/VBO.
-     * @param vertices Vector de posiciones (x, y, z) de los vértices.
-     * @param drawMode Modo de dibujo de OpenGL.
-     */
+    GLuint VAO = 0; ///< Vertex Array Object.
+    GLuint VBO = 0; ///< Vertex Buffer Object.
+    GLuint VBOs[3] = {0, 0, 0}; ///< VBO 0 = posiciones, 1 = texcoords, 2 = normales / otros
+    GLuint EBO = 0; ///< Element Buffer Object. Si se usan índices.
+
+    GLsizei count = 0; ///< Número de vértices o índices.
+    GLenum mode = GL_TRIANGLES; ///< Modo de dibujo.
+
+    // Carga de vertices y configuración de buffers, adapatadas a distintas necesidades.
+
+    /// Carga posiciones (3 floats por vértice).
     void upload(const std::vector<float>& vertices, GLenum drawMode);
 
+    /// Carga vértices con color (RGB, 6 floats por vértice).
     void uploadColored(const std::vector<float>& vertices, GLenum drawMode);
 
-    void uploadEBO(const std::vector<float>& vertices, const std::vector<unsigned int>& indices, GLenum drawMode);
-
+    /// Carga vértices con color + alpha (RGBA, 7 floats p/ vértice).
     void uploadColoredAlpha(const std::vector<float>& vertices, GLenum drawMode);
 
-    /**
-     * @brief Dibuja la malla usando el modo configurado.
-     */
+    /// Carga vértices + índices en VAO/VBO/EBO.
+    void uploadEBO(const std::vector<float>& vertices, const std::vector<unsigned int>& indices, GLenum drawMode);
+
+    /// Carga posiciones + texcoords + normales (en 3 VBOs separados).
+    void uploadFullModel(const std::vector<float>& verts, const std::vector<float>& tcs, const std::vector<float>& normals, GLenum drawMode = GL_TRIANGLES);
+
+    /// Dibujo con drawArrays.
     void draw() const;
 
+    /// Dibujo con drawElements.
     void drawElements(int count) const;
 
-    /**
-     * @brief Libera los recursos de la malla (VAO y VBO).
-     */
+    /// Limpieza.
     void destroy();
 
+    /// Cambia el modo de dibujo.
     void setMode(GLenum newMode) { mode = newMode; }
 };
 

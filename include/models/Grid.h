@@ -1,74 +1,77 @@
 #ifndef GRID_H
 #define GRID_H
 
-
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include <vector>
-#include <iostream>
-#include <assert.h>
+#include <string>
+#include <cmath>
+#include <cassert>
+#include <GL/glew.h>
 #include "Model.h"
 
-class Grid:public Model
-{
-
+/**
+ * @class Grid
+ * @brief Genera y dibuja una malla matemática con distintas funciones de altura.
+ */
+class Grid : public Model {
 private:
-    
-    // int m_width = 0;
-	// int m_depth = 0; // Profundidad de la malla 
-    // int m_funcType = 0; // Tipo de función para la altura
 
-    struct Vertex
-    {
-        glm::vec3 Pos; 
-        
-        /**
-         * @brief Inicializa el atributo Pos de cada Vertex 
-         */
+    /// Estructura interna de un vértice (posición)
+    struct Vertex {
+        glm::vec3 Pos;
+        /// Inicializa posición del vértice
         void InitVertex(int x, int y, int z);
     };
-    
 
-    /**
-     * @brief Inicializa cada vertice de la Grid en base al width y depth  
-     * @param Vertices referencia a una lista de vertices para inicializar 
-     */
-    void InitVertices(std::vector<Vertex>& Vertices);
+    /// Genera todos los vértices usando la función seleccionada
+    void InitVertices(std::vector<Vertex>& vertices);
 
-    /**
-     * @brief Inicializa indices para los veritces de la malla  
-     * @param Vertices 
-     */
-    void InitIndices(std::vector<uint>& Indices);
+    /// Genera los índices de triángulos de la malla
+    void InitIndices(std::vector<unsigned int>& indices);
 
-    void initGeometry();
-
+    /// Función y = cos(x) + sin(z)
     void cosSinFunc(float x, float z, float& y) const;
+
+    /// Función gaussiana y = exp(...)
     void expFunc(float x, float z, float& y) const;
+
+    /// Devuelve y para el punto (x,z) según m_funcType
+    float evalFunc(float x, float z) const;
+
     glm::mat4 m_model_mat = glm::mat4(1.0f);
 
-public: 
-    Grid()=default;
-    Grid(int width, int depth, int funcType):m_width(width),m_depth(depth),m_funcType(funcType){};
-    void CreateTriangleList();
-    int m_width = 0;
-	int m_depth = 0; // Profundidad de la malla 
-    int m_funcType = 0; // Tipo de función para la altura
+public:
+    int m_width  = 0; ///< Ancho del grid
+    int m_depth  = 0; ///< Profundidad del grid
+    int m_funcType = 0; ///< Tipo de función usada
+    std::string m_name; ///< Nombre identificador
+
+    Grid() = default;
+
+    /// Constructor con dimensiones y tipo de función
+    Grid(int width, int depth, int funcType)
+        : m_width(width), m_depth(depth), m_funcType(funcType) {}
+
+    /**
+     * @brief Genera la malla y la sube a GPU.
+     */
+    void initGeometry();
+
+    /**
+     * @brief Dibuja el grid usando glDrawElements().
+     */
     void draw() const;
 
-        /**
-     * @brief Devuelve los vértices del grid (como un vector plano de floats x,y,z)
+    /**
+     * @brief Devuelve los vértices como float[x,y,z].
      */
     std::vector<float> getVertices() const;
 
     /**
-     * @brief Devuelve el número total de vértices del grid
+     * @brief Número total de vértices.
      */
     int getNumVertices() const;
-
-
 };
-
 
 #endif

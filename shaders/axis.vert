@@ -9,7 +9,8 @@ uniform mat4 uProjection;
 out vec3 vColor;
 
 void main()
-{
+{   
+    // Al ser un eje fijo, no usamos una matriz de modelo, solo vista y proyección.
     gl_Position = uProjection * uView * vec4(aPos, 1.0);
     vColor = aColor;
 }
